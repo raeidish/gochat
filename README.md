@@ -8,7 +8,7 @@ testing htmx by making a simple chat server with htmx client.
 2. build and run project, either with:
 
 ```
-go build cmd/gochat/main.go
+go build -o gochat cmd/gochat/main.go
 ./gochat
 ```
 
@@ -17,3 +17,4 @@ or
 ```
 make run
 ```
+3. open browser to localhost:8080
