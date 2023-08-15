@@ -17,4 +17,7 @@ or
 ```
 make run
 ```
-3. open browser to localhost:8080
+3. open browser to:
+```
+http://localhost:8080
+```
