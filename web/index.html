@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Go chat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://unpkg.com/htmx.org@1.9.4" integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+        <link rel="stylesheet"i href="main.css"/>
+    </head>
+    <body>
+        <main>
+            <div id="chat_wrapper" hx-ext="ws" ws-connect="/connect">
+                <div id="chat_room">
+                </div>
+                <form ws-send autocomplete="off" hx-on::ws-after-send="this.reset()" hx-target="#chat_room">
+                    <input name="chat_message" placeholder="Message">
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
